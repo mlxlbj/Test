@@ -33,8 +33,14 @@ namespace Test
 
         static void Main(string[] args)
         {
+            Console.Title = "BOM编码数据合并";
             //初始化excel对象
-            ExcelOperate myexcel = new ExcelOperate();
+            //ExcelOperate myexcel = new ExcelOperate();
+
+            //从键盘获取文件路径
+            string filePath = Console.ReadLine();
+            ExcelOperate.ReadExcelA(filePath);
+            ExcelOperate.WriteExcelA();
 
             Console.ReadLine();
 
